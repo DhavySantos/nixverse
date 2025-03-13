@@ -13,12 +13,14 @@
       # Define the default overlay
       flake.overlays.default = final: prev: {
         CascadiaCode-NerdFont = self.packages.${final.stdenv.hostPlatform.system}.CascadiaCode-NerdFont;
+        redot4 = self.packages.${final.stdenv.hostPlatform.system}.redot;
       };
 
       # Define packages per system
       perSystem = { pkgs, ... }: {
         packages = {
           CascadiaCode-NerdFont = pkgs.callPackage ./packages/fonts/CascadiaCode-NerdFont.nix { };
+          redot4 = pkgs.callPackage ./packages/programs/redot.nix {};
         };
       };
     };
