@@ -76,6 +76,7 @@ let
       "out"
       "man"
     ];
+
     separateDebugInfo = true;
 
     # Set the build name which is part of the version. In official downloads, this
@@ -256,7 +257,7 @@ let
         shiryel
         corngood
       ];
-      mainProgram = "godot4${suffix}";
+      mainProgram = "redot4${suffix}";
     };
   };
 
